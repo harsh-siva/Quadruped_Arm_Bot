@@ -1,0 +1,52 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "URDF USD Converter v0.1.2"
+    }
+    defaultPrim = "Spiderbot_Without_Nav"
+    doc = """Generated from Composed Stage of root layer /tmp/tmp993e5b6q/Spiderbot_Without_Nav.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_Spiderbot_Without_Nav_y8gekdwm/usdex_Spiderbot_Without_Nav/Spiderbot_Without_Nav.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_Spiderbot_Without_Nav_y8gekdwm/temp_Spiderbot_Without_Nav/Spiderbot_Without_Nav.usd
+
+
+Generated from Composed Stage of root layer /home/harsh/project/Quadruped_Arm_bot/isaac_sim/Spiderbot_Without_Nav/payloads/base.usd
+"""
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "Spiderbot_Without_Nav" (
+    prepend references = @./payloads/base.usda@
+    variants = {
+        string Physics = "physx"
+    }
+    append variantSets = "Physics"
+)
+{
+    variantSet "Physics" = {
+        "mujoco" (
+            prepend payload = @./payloads/Physics/mujoco.usda@
+        ) {
+
+        }
+        "none" {
+
+        }
+        "physics" (
+            prepend payload = @./payloads/Physics/physics.usda@
+        ) {
+
+        }
+        "physx" (
+            prepend payload = @./payloads/Physics/physx.usda@
+        ) {
+
+        }
+    }
+}
+

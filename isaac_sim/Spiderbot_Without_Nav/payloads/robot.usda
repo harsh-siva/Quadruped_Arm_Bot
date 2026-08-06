@@ -1,0 +1,202 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "URDF USD Converter v0.1.2"
+    }
+    defaultPrim = "Spiderbot_Without_Nav"
+    doc = """Generated from Composed Stage of root layer /tmp/tmp993e5b6q/Spiderbot_Without_Nav.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_Spiderbot_Without_Nav_y8gekdwm/usdex_Spiderbot_Without_Nav/Spiderbot_Without_Nav.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_Spiderbot_Without_Nav_y8gekdwm/temp_Spiderbot_Without_Nav/Spiderbot_Without_Nav.usd
+"""
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+over "Spiderbot_Without_Nav" (
+    prepend apiSchemas = ["IsaacRobotAPI"]
+)
+{
+    prepend rel isaac:physics:robotJoints = [
+        </Spiderbot_Without_Nav/Physics/J_Coxa_FR>,
+        </Spiderbot_Without_Nav/Physics/J_Coxa_BR>,
+        </Spiderbot_Without_Nav/Physics/J_Coxa_FL>,
+        </Spiderbot_Without_Nav/Physics/J_Coxa_BL>,
+        </Spiderbot_Without_Nav/Physics/J_Femur_FR>,
+        </Spiderbot_Without_Nav/Physics/J_Tibia_FR>,
+        </Spiderbot_Without_Nav/Physics/J_Femur_BR>,
+        </Spiderbot_Without_Nav/Physics/J_Tibia_BR>,
+        </Spiderbot_Without_Nav/Physics/J_Femur_FL>,
+        </Spiderbot_Without_Nav/Physics/J_Tibia_FL>,
+        </Spiderbot_Without_Nav/Physics/J_Femur_BL>,
+        </Spiderbot_Without_Nav/Physics/J_Tibia_BL>,
+    ]
+    prepend rel isaac:physics:robotLinks = [
+        </Spiderbot_Without_Nav/Geometry/base_link>,
+        </Spiderbot_Without_Nav/Geometry/base_link/coxa_FR_1>,
+        </Spiderbot_Without_Nav/Geometry/base_link/coxa_FR_1/femur_FR_1>,
+        </Spiderbot_Without_Nav/Geometry/base_link/coxa_FR_1/femur_FR_1/tibia_FR_1>,
+        </Spiderbot_Without_Nav/Geometry/base_link/coxa_BR_1>,
+        </Spiderbot_Without_Nav/Geometry/base_link/coxa_BR_1/femur_BR_1>,
+        </Spiderbot_Without_Nav/Geometry/base_link/coxa_BR_1/femur_BR_1/tibia_BR_1>,
+        </Spiderbot_Without_Nav/Geometry/base_link/coxa_FL_1>,
+        </Spiderbot_Without_Nav/Geometry/base_link/coxa_FL_1/femur_FL_1>,
+        </Spiderbot_Without_Nav/Geometry/base_link/coxa_FL_1/femur_FL_1/tibia_FL_1>,
+        </Spiderbot_Without_Nav/Geometry/base_link/coxa_BL_1>,
+        </Spiderbot_Without_Nav/Geometry/base_link/coxa_BL_1/femur_BL_1>,
+        </Spiderbot_Without_Nav/Geometry/base_link/coxa_BL_1/femur_BL_1/tibia_BL_1>,
+    ]
+    token isaac:robotType = "Quadruped"
+
+    over "Geometry"
+    {
+        over "base_link" (
+            prepend apiSchemas = ["IsaacLinkAPI"]
+        )
+        {
+            over "coxa_FR_1" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+                over "femur_FR_1" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                    over "tibia_FR_1" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                    }
+                }
+            }
+
+            over "coxa_BR_1" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+                over "femur_BR_1" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                    over "tibia_BR_1" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                    }
+                }
+            }
+
+            over "coxa_FL_1" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+                over "femur_FL_1" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                    over "tibia_FL_1" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                    }
+                }
+            }
+
+            over "coxa_BL_1" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+                over "femur_BL_1" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                    over "tibia_BL_1" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                    }
+                }
+            }
+        }
+    }
+
+    over "Physics"
+    {
+        over "J_Coxa_FR" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "J_Femur_FR" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "J_Tibia_FR" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "J_Coxa_BR" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "J_Femur_BR" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "J_Tibia_BR" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "J_Coxa_FL" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "J_Femur_FL" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "J_Tibia_FL" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "J_Coxa_BL" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "J_Femur_BL" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "J_Tibia_BL" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+    }
+}
+

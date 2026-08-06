@@ -1,0 +1,115 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "URDF USD Converter v0.1.2"
+    }
+    defaultPrim = "Spiderbot_Without_Nav"
+    doc = """Generated from Composed Stage of root layer /tmp/tmp993e5b6q/Spiderbot_Without_Nav.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_Spiderbot_Without_Nav_y8gekdwm/usdex_Spiderbot_Without_Nav/Spiderbot_Without_Nav.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_Spiderbot_Without_Nav_y8gekdwm/temp_Spiderbot_Without_Nav/Spiderbot_Without_Nav.usd
+
+
+Generated from Composed Stage of root layer /home/harsh/project/Quadruped_Arm_bot/isaac_sim/Spiderbot_Without_Nav/payloads/base.usd
+"""
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    subLayers = [
+        @./physics.usda@
+    ]
+    upAxis = "Z"
+)
+
+over "Spiderbot_Without_Nav"
+{
+    over "Physics"
+    {
+        over "J_Coxa_FR" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float physxJoint:maxJointVelocity = 5729.578
+        }
+
+        over "J_Femur_FR" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float physxJoint:maxJointVelocity = 5729.578
+        }
+
+        over "J_Tibia_FR" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float physxJoint:maxJointVelocity = 5729.578
+        }
+
+        over "J_Coxa_BR" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float physxJoint:maxJointVelocity = 5729.578
+        }
+
+        over "J_Femur_BR" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float physxJoint:maxJointVelocity = 5729.578
+        }
+
+        over "J_Tibia_BR" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float physxJoint:maxJointVelocity = 5729.578
+        }
+
+        over "J_Coxa_FL" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float physxJoint:maxJointVelocity = 5729.578
+        }
+
+        over "J_Femur_FL" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float physxJoint:maxJointVelocity = 5729.578
+        }
+
+        over "J_Tibia_FL" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float physxJoint:maxJointVelocity = 5729.578
+        }
+
+        over "J_Coxa_BL" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float physxJoint:maxJointVelocity = 5729.578
+        }
+
+        over "J_Femur_BL" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float physxJoint:maxJointVelocity = 5729.578
+        }
+
+        over "J_Tibia_BL" (
+            prepend apiSchemas = ["PhysxJointAPI"]
+        )
+        {
+            float physxJoint:maxJointVelocity = 5729.578
+        }
+    }
+}
+

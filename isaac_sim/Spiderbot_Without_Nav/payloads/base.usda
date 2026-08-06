@@ -1,0 +1,449 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "URDF USD Converter v0.1.2"
+    }
+    defaultPrim = "Spiderbot_Without_Nav"
+    doc = """Generated from Composed Stage of root layer /tmp/tmp993e5b6q/Spiderbot_Without_Nav.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_Spiderbot_Without_Nav_y8gekdwm/usdex_Spiderbot_Without_Nav/Spiderbot_Without_Nav.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_Spiderbot_Without_Nav_y8gekdwm/temp_Spiderbot_Without_Nav/Spiderbot_Without_Nav.usd
+
+
+Generated from Composed Stage of root layer /home/harsh/project/Quadruped_Arm_bot/isaac_sim/Spiderbot_Without_Nav/payloads/base.usd
+"""
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    subLayers = [
+        @./robot.usda@
+    ]
+    upAxis = "Z"
+)
+
+def Xform "Spiderbot_Without_Nav" (
+    prepend apiSchemas = ["GeomModelAPI"]
+    assetInfo = {
+        string name = "Spiderbot_Without_Nav"
+    }
+    kind = "component"
+)
+{
+    float3[] extentsHint = [(-0.1919561, -0.21125658, -0.12516028), (0.17771047, 0.17125657, 0.0877), (3.4028235e38, 3.4028235e38, 3.4028235e38), (-3.4028235e38, -3.4028235e38, -3.4028235e38), (3.4028235e38, 3.4028235e38, 3.4028235e38), (-3.4028235e38, -3.4028235e38, -3.4028235e38), (-0.1919561, -0.21125658, -0.12516028), (0.17771047, 0.17125657, 0.0877)]
+
+    def Scope "Materials"
+    {
+    }
+
+    def Scope "Geometry"
+    {
+        def Xform "base_link"
+        {
+            def Xform "base_link" (
+                instanceable = true
+                prepend references = @./instances.usda@</Instances/base_link>
+            )
+            {
+                quatd xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:scale = (0.001000000047, 0.001000000047, 0.001000000047)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Xform "coxa_FR_1"
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                float3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-0.0749, 0.0542, 0.0528)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                def Xform "coxa_FR_1" (
+                    instanceable = true
+                    prepend references = @./instances.usda@</Instances/coxa_FR_1>
+                )
+                {
+                    quatd xformOp:orient = (1, 0, 0, 0)
+                    double3 xformOp:scale = (0.001000000047, 0.001000000047, 0.001000000047)
+                    double3 xformOp:translate = (0.0749, -0.0542, -0.0528)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+
+                def Xform "femur_FR_1"
+                {
+                    quatf xformOp:orient = (1, 0, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (-0.055296, 0.015981, -0.0141)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                    def Xform "femur_FR_1" (
+                        instanceable = true
+                        prepend references = @./instances.usda@</Instances/femur_FR_1>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (0.001000000047, 0.001000000047, 0.001000000047)
+                        double3 xformOp:translate = (0.130196, -0.070181, -0.0387)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Xform "tibia_FR_1"
+                    {
+                        quatf xformOp:orient = (1, 0, 0, 0)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (-0.049243, 0.049244, -0.01866)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Xform "tibia_FR_1" (
+                            instanceable = true
+                            prepend references = @./instances.usda@</Instances/tibia_FR_1>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (0.001000000047, 0.001000000047, 0.001000000047)
+                            double3 xformOp:translate = (0.179439, -0.119425, -0.02004)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Xform "tibia_FR_1_1" (
+                            displayName = "tibia_FR_1"
+                            instanceable = true
+                            prepend references = @./instances.usda@</Instances/tibia_FR_1_1>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (0.001000000047, 0.001000000047, 0.001000000047)
+                            double3 xformOp:translate = (0.179439, -0.119425, -0.02004)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+
+                    def Xform "femur_FR_1_1" (
+                        displayName = "femur_FR_1"
+                        instanceable = true
+                        prepend references = @./instances.usda@</Instances/femur_FR_1_1>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (0.001000000047, 0.001000000047, 0.001000000047)
+                        double3 xformOp:translate = (0.130196, -0.070181, -0.0387)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+
+                def Xform "coxa_FR_1_1" (
+                    displayName = "coxa_FR_1"
+                    instanceable = true
+                    prepend references = @./instances.usda@</Instances/coxa_FR_1_1>
+                )
+                {
+                    quatd xformOp:orient = (1, 0, 0, 0)
+                    double3 xformOp:scale = (0.001000000047, 0.001000000047, 0.001000000047)
+                    double3 xformOp:translate = (0.0749, -0.0542, -0.0528)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+            }
+
+            def Xform "coxa_BR_1"
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                float3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0.0549, 0.0542, 0.0528)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                def Xform "coxa_BR_1" (
+                    instanceable = true
+                    prepend references = @./instances.usda@</Instances/coxa_BR_1>
+                )
+                {
+                    quatd xformOp:orient = (1, 0, 0, 0)
+                    double3 xformOp:scale = (0.001000000047, 0.001000000047, 0.001000000047)
+                    double3 xformOp:translate = (-0.0549, -0.0542, -0.0528)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+
+                def Xform "femur_BR_1"
+                {
+                    quatf xformOp:orient = (1, 0, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0.015981, 0.055296, -0.0141)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                    def Xform "femur_BR_1" (
+                        instanceable = true
+                        prepend references = @./instances.usda@</Instances/femur_BR_1>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (0.001000000047, 0.001000000047, 0.001000000047)
+                        double3 xformOp:translate = (-0.070881, -0.109496, -0.0387)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Xform "tibia_BR_1"
+                    {
+                        quatf xformOp:orient = (1, 0, 0, 0)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0.049243, 0.049244, -0.01866)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Xform "tibia_BR_1" (
+                            instanceable = true
+                            prepend references = @./instances.usda@</Instances/tibia_BR_1>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (0.001000000047, 0.001000000047, 0.001000000047)
+                            double3 xformOp:translate = (-0.120124, -0.15874, -0.02004)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Xform "tibia_BR_1_1" (
+                            displayName = "tibia_BR_1"
+                            instanceable = true
+                            prepend references = @./instances.usda@</Instances/tibia_BR_1_1>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (0.001000000047, 0.001000000047, 0.001000000047)
+                            double3 xformOp:translate = (-0.120124, -0.15874, -0.02004)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+
+                    def Xform "femur_BR_1_1" (
+                        displayName = "femur_BR_1"
+                        instanceable = true
+                        prepend references = @./instances.usda@</Instances/femur_BR_1_1>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (0.001000000047, 0.001000000047, 0.001000000047)
+                        double3 xformOp:translate = (-0.070881, -0.109496, -0.0387)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+
+                def Xform "coxa_BR_1_1" (
+                    displayName = "coxa_BR_1"
+                    instanceable = true
+                    prepend references = @./instances.usda@</Instances/coxa_BR_1_1>
+                )
+                {
+                    quatd xformOp:orient = (1, 0, 0, 0)
+                    double3 xformOp:scale = (0.001000000047, 0.001000000047, 0.001000000047)
+                    double3 xformOp:translate = (-0.0549, -0.0542, -0.0528)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+            }
+
+            def Xform "coxa_FL_1"
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                float3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-0.0749, -0.0942, 0.0528)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                def Xform "coxa_FL_1" (
+                    instanceable = true
+                    prepend references = @./instances.usda@</Instances/coxa_FL_1>
+                )
+                {
+                    quatd xformOp:orient = (1, 0, 0, 0)
+                    double3 xformOp:scale = (0.001000000047, 0.001000000047, 0.001000000047)
+                    double3 xformOp:translate = (0.0749, 0.0942, -0.0528)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+
+                def Xform "femur_FL_1"
+                {
+                    quatf xformOp:orient = (1, 0, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (-0.015981, -0.055296, -0.0141)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                    def Xform "femur_FL_1" (
+                        instanceable = true
+                        prepend references = @./instances.usda@</Instances/femur_FL_1>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (0.001000000047, 0.001000000047, 0.001000000047)
+                        double3 xformOp:translate = (0.090881, 0.149496, -0.0387)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Xform "tibia_FL_1"
+                    {
+                        quatf xformOp:orient = (1, 0, 0, 0)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (-0.049243, -0.049244, -0.01866)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Xform "tibia_FL_1" (
+                            instanceable = true
+                            prepend references = @./instances.usda@</Instances/tibia_FL_1>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (0.001000000047, 0.001000000047, 0.001000000047)
+                            double3 xformOp:translate = (0.140124, 0.19874, -0.02004)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Xform "tibia_FL_1_1" (
+                            displayName = "tibia_FL_1"
+                            instanceable = true
+                            prepend references = @./instances.usda@</Instances/tibia_FL_1_1>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (0.001000000047, 0.001000000047, 0.001000000047)
+                            double3 xformOp:translate = (0.140124, 0.19874, -0.02004)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+
+                    def Xform "femur_FL_1_1" (
+                        displayName = "femur_FL_1"
+                        instanceable = true
+                        prepend references = @./instances.usda@</Instances/femur_FL_1_1>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (0.001000000047, 0.001000000047, 0.001000000047)
+                        double3 xformOp:translate = (0.090881, 0.149496, -0.0387)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+
+                def Xform "coxa_FL_1_1" (
+                    displayName = "coxa_FL_1"
+                    instanceable = true
+                    prepend references = @./instances.usda@</Instances/coxa_FL_1_1>
+                )
+                {
+                    quatd xformOp:orient = (1, 0, 0, 0)
+                    double3 xformOp:scale = (0.001000000047, 0.001000000047, 0.001000000047)
+                    double3 xformOp:translate = (0.0749, 0.0942, -0.0528)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+            }
+
+            def Xform "coxa_BL_1"
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                float3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0.0549, -0.0942, 0.0528)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                def Xform "coxa_BL_1" (
+                    instanceable = true
+                    prepend references = @./instances.usda@</Instances/coxa_BL_1>
+                )
+                {
+                    quatd xformOp:orient = (1, 0, 0, 0)
+                    double3 xformOp:scale = (0.001000000047, 0.001000000047, 0.001000000047)
+                    double3 xformOp:translate = (-0.0549, 0.0942, -0.0528)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+
+                def Xform "femur_BL_1"
+                {
+                    quatf xformOp:orient = (1, 0, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0.056478, -0.011101, -0.0141)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                    def Xform "femur_BL_1" (
+                        instanceable = true
+                        prepend references = @./instances.usda@</Instances/femur_BL_1>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (0.001000000047, 0.001000000047, 0.001000000047)
+                        double3 xformOp:translate = (-0.111378, 0.105301, -0.0387)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Xform "tibia_BL_1"
+                    {
+                        quatf xformOp:orient = (1, 0, 0, 0)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0.053348, -0.044764, -0.01866)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Xform "tibia_BL_1" (
+                            instanceable = true
+                            prepend references = @./instances.usda@</Instances/tibia_BL_1>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (0.001000000047, 0.001000000047, 0.001000000047)
+                            double3 xformOp:translate = (-0.164726, 0.150065, -0.02004)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Xform "tibia_BL_1_1" (
+                            displayName = "tibia_BL_1"
+                            instanceable = true
+                            prepend references = @./instances.usda@</Instances/tibia_BL_1_1>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (0.001000000047, 0.001000000047, 0.001000000047)
+                            double3 xformOp:translate = (-0.164726, 0.150065, -0.02004)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+
+                    def Xform "femur_BL_1_1" (
+                        displayName = "femur_BL_1"
+                        instanceable = true
+                        prepend references = @./instances.usda@</Instances/femur_BL_1_1>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (0.001000000047, 0.001000000047, 0.001000000047)
+                        double3 xformOp:translate = (-0.111378, 0.105301, -0.0387)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+
+                def Xform "coxa_BL_1_1" (
+                    displayName = "coxa_BL_1"
+                    instanceable = true
+                    prepend references = @./instances.usda@</Instances/coxa_BL_1_1>
+                )
+                {
+                    quatd xformOp:orient = (1, 0, 0, 0)
+                    double3 xformOp:scale = (0.001000000047, 0.001000000047, 0.001000000047)
+                    double3 xformOp:translate = (-0.0549, 0.0942, -0.0528)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+            }
+
+            def Xform "base_link_1" (
+                displayName = "base_link"
+                instanceable = true
+                prepend references = @./instances.usda@</Instances/base_link_1>
+            )
+            {
+                quatd xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:scale = (0.001000000047, 0.001000000047, 0.001000000047)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+        }
+    }
+
+    def Scope "Physics"
+    {
+    }
+
+    def Scope "VisualMaterials"
+    {
+    }
+}
+

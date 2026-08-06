@@ -1,0 +1,402 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "URDF USD Converter v0.1.2"
+    }
+    defaultPrim = "Spiderbot_Without_Nav"
+    doc = """Generated from Composed Stage of root layer /tmp/tmp993e5b6q/Spiderbot_Without_Nav.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_Spiderbot_Without_Nav_y8gekdwm/usdex_Spiderbot_Without_Nav/Spiderbot_Without_Nav.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_Spiderbot_Without_Nav_y8gekdwm/temp_Spiderbot_Without_Nav/Spiderbot_Without_Nav.usd
+
+
+Generated from Composed Stage of root layer /home/harsh/project/Quadruped_Arm_bot/isaac_sim/Spiderbot_Without_Nav/payloads/base.usd
+"""
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+over "Spiderbot_Without_Nav"
+{
+    over "Geometry"
+    {
+        over "base_link" (
+            prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsArticulationRootAPI", "NewtonArticulationRootAPI", "PhysicsMassAPI"]
+        )
+        {
+            bool newton:selfCollisionEnabled = 0
+            point3f physics:centerOfMass = (-0.01192562, -0.020009719, 0.040469825)
+            float3 physics:diagonalInertia = (0.01956599, 0.022362484, 0.030768527)
+            float physics:mass = 5.614975
+            quatf physics:principalAxes = (0.008105779, 0.7076986, 0.7064192, -0.0083026225)
+
+            over "coxa_FR_1" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (-0.028011123, 0.029189467, -0.025161453)
+                float3 physics:diagonalInertia = (0.0001868536, 0.0002383027, 0.0002988437)
+                float physics:mass = 0.53264475
+                quatf physics:principalAxes = (0.27603102, 0.64346194, 0.35677743, 0.6184444)
+
+                over "femur_FR_1" (
+                    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                )
+                {
+                    point3f physics:centerOfMass = (-0.0065588187, 0.044879664, -0.0035371974)
+                    float3 physics:diagonalInertia = (0.000137, 0.00019372712, 0.0003002729)
+                    float physics:mass = 0.30372384
+                    quatf physics:principalAxes = (0.91582197, 0.121751636, 0.05043118, -0.3793459)
+
+                    over "tibia_FR_1" (
+                        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                    )
+                    {
+                        point3f physics:centerOfMass = (0.015552753, 0.025952047, -0.044350337)
+                        float3 physics:diagonalInertia = (0.0001395752, 0.0016611262, 0.0017072986)
+                        float physics:mass = 0.85671884
+                        quatf physics:principalAxes = (0.71312326, 0.1250139, 0.6738149, 0.14764898)
+                    }
+                }
+            }
+
+            over "coxa_BR_1" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (0.029189004, 0.028011587, -0.025161453)
+                float3 physics:diagonalInertia = (0.0001868536, 0.0002383027, 0.0002988437)
+                float physics:mass = 0.53264475
+                quatf physics:principalAxes = (0.70727605, 0.24212278, 0.6324896, 0.20271657)
+
+                over "femur_BR_1" (
+                    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                )
+                {
+                    point3f physics:centerOfMass = (0.044879198, 0.0065592835, -0.0035371974)
+                    float3 physics:diagonalInertia = (0.000137, 0.00019372712, 0.0003002729)
+                    float physics:mass = 0.30372384
+                    quatf physics:principalAxes = (0.91582197, 0.121751636, -0.05043118, 0.3793459)
+
+                    over "tibia_BR_1" (
+                        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                    )
+                    {
+                        point3f physics:centerOfMass = (0.025952583, -0.015553287, -0.044350337)
+                        float3 physics:diagonalInertia = (0.0001395752, 0.0016611262, 0.0017072986)
+                        float physics:mass = 0.85671884
+                        quatf physics:principalAxes = (0.39985073, 0.56485724, 0.3880609, 0.6086579)
+                    }
+                }
+            }
+
+            over "coxa_FL_1" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (-0.029189004, -0.028011587, -0.025161453)
+                float3 physics:diagonalInertia = (0.0001868536, 0.0002383027, 0.0002988437)
+                float physics:mass = 0.53264475
+                quatf physics:principalAxes = (0.6324896, 0.20271657, 0.70727605, 0.24212278)
+
+                over "femur_FL_1" (
+                    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                )
+                {
+                    point3f physics:centerOfMass = (-0.044879198, -0.0065592835, -0.0035371974)
+                    float3 physics:diagonalInertia = (0.000137, 0.00019372712, 0.0003002729)
+                    float physics:mass = 0.30372384
+                    quatf physics:principalAxes = (0.91582197, -0.121751636, 0.05043118, 0.3793459)
+
+                    over "tibia_FL_1" (
+                        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                    )
+                    {
+                        point3f physics:centerOfMass = (-0.025952583, 0.015553287, -0.044350337)
+                        float3 physics:diagonalInertia = (0.0001395752, 0.0016611262, 0.0017072986)
+                        float physics:mass = 0.85671884
+                        quatf physics:principalAxes = (0.3880609, 0.6086579, 0.39985073, 0.56485724)
+                    }
+                }
+            }
+
+            over "coxa_BL_1" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (0.03044852, -0.026637064, -0.025161453)
+                float3 physics:diagonalInertia = (0.0001868797, 0.00023841992, 0.00029870038)
+                float physics:mass = 0.53264475
+                quatf physics:principalAxes = (0.38502195, 0.6059083, 0.30371538, 0.6264106)
+
+                over "femur_BL_1" (
+                    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                )
+                {
+                    point3f physics:centerOfMass = (0.010445758, -0.044137068, -0.0035371974)
+                    float3 physics:diagonalInertia = (0.0001360307, 0.00019400912, 0.00029996017)
+                    float physics:mass = 0.30372384
+                    quatf physics:principalAxes = (0.11733547, 0.8990753, 0.41828415, -0.054169852)
+
+                    over "tibia_BL_1" (
+                        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                    )
+                    {
+                        point3f physics:centerOfMass = (-0.013231809, -0.027209431, -0.044350337)
+                        float3 physics:diagonalInertia = (0.00013962357, 0.0016611512, 0.0017072252)
+                        float physics:mass = 0.85671884
+                        quatf physics:principalAxes = (0.67874223, 0.11623608, 0.7188217, 0.0953596)
+                    }
+                }
+            }
+        }
+    }
+
+    over "Physics"
+    {
+        def PhysicsRevoluteJoint "J_Coxa_FR" (
+            prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+            float drive:angular:physics:maxForce = 100
+            uniform token physics:axis = "Z"
+            custom rel physics:body0
+            prepend rel physics:body0 = </Spiderbot_Without_Nav/Geometry/base_link>
+            custom rel physics:body1
+            prepend rel physics:body1 = </Spiderbot_Without_Nav/Geometry/base_link/coxa_FR_1>
+            point3f physics:localPos0 = (-0.0749, 0.0542, 0.0528)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (1, 0, 0, 0)
+            quatf physics:localRot1 = (1, 0, 0, 0)
+            float physics:lowerLimit = -75
+            float physics:upperLimit = 75
+            custom float urdf:limit:effort = 100
+            custom float urdf:limit:velocity = 100
+        }
+
+        def PhysicsRevoluteJoint "J_Femur_FR" (
+            prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+            float drive:angular:physics:maxForce = 100
+            uniform token physics:axis = "X"
+            custom rel physics:body0
+            prepend rel physics:body0 = </Spiderbot_Without_Nav/Geometry/base_link/coxa_FR_1>
+            custom rel physics:body1
+            prepend rel physics:body1 = </Spiderbot_Without_Nav/Geometry/base_link/coxa_FR_1/femur_FR_1>
+            point3f physics:localPos0 = (-0.055296, 0.015981, -0.0141)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.3826834, 0, 0, -0.92387956)
+            quatf physics:localRot1 = (0.3826834, 0, 0, -0.92387956)
+            float physics:lowerLimit = -89.999985
+            float physics:upperLimit = 44.999992
+            custom float urdf:limit:effort = 100
+            custom float urdf:limit:velocity = 100
+        }
+
+        def PhysicsRevoluteJoint "J_Tibia_FR" (
+            prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+            float drive:angular:physics:maxForce = 100
+            uniform token physics:axis = "X"
+            custom rel physics:body0
+            prepend rel physics:body0 = </Spiderbot_Without_Nav/Geometry/base_link/coxa_FR_1/femur_FR_1>
+            custom rel physics:body1
+            prepend rel physics:body1 = </Spiderbot_Without_Nav/Geometry/base_link/coxa_FR_1/femur_FR_1/tibia_FR_1>
+            point3f physics:localPos0 = (-0.049243, 0.049244, -0.01866)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.92387956, 0, 0, 0.3826834)
+            quatf physics:localRot1 = (0.92387956, 0, 0, 0.3826834)
+            float physics:lowerLimit = -75
+            float physics:upperLimit = 89.999985
+            custom float urdf:limit:effort = 100
+            custom float urdf:limit:velocity = 100
+        }
+
+        def PhysicsRevoluteJoint "J_Coxa_BR" (
+            prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+            float drive:angular:physics:maxForce = 100
+            uniform token physics:axis = "Z"
+            custom rel physics:body0
+            prepend rel physics:body0 = </Spiderbot_Without_Nav/Geometry/base_link>
+            custom rel physics:body1
+            prepend rel physics:body1 = </Spiderbot_Without_Nav/Geometry/base_link/coxa_BR_1>
+            point3f physics:localPos0 = (0.0549, 0.0542, 0.0528)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (1, 0, 0, 0)
+            quatf physics:localRot1 = (1, 0, 0, 0)
+            float physics:lowerLimit = -75
+            float physics:upperLimit = 75
+            custom float urdf:limit:effort = 100
+            custom float urdf:limit:velocity = 100
+        }
+
+        def PhysicsRevoluteJoint "J_Femur_BR" (
+            prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+            float drive:angular:physics:maxForce = 100
+            uniform token physics:axis = "X"
+            custom rel physics:body0
+            prepend rel physics:body0 = </Spiderbot_Without_Nav/Geometry/base_link/coxa_BR_1>
+            custom rel physics:body1
+            prepend rel physics:body1 = </Spiderbot_Without_Nav/Geometry/base_link/coxa_BR_1/femur_BR_1>
+            point3f physics:localPos0 = (0.015981, 0.055296, -0.0141)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.3826834, 0, 0, 0.92387956)
+            quatf physics:localRot1 = (0.3826834, 0, 0, 0.92387956)
+            float physics:lowerLimit = -89.999985
+            float physics:upperLimit = 44.999992
+            custom float urdf:limit:effort = 100
+            custom float urdf:limit:velocity = 100
+        }
+
+        def PhysicsRevoluteJoint "J_Tibia_BR" (
+            prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+            float drive:angular:physics:maxForce = 100
+            uniform token physics:axis = "X"
+            custom rel physics:body0
+            prepend rel physics:body0 = </Spiderbot_Without_Nav/Geometry/base_link/coxa_BR_1/femur_BR_1>
+            custom rel physics:body1
+            prepend rel physics:body1 = </Spiderbot_Without_Nav/Geometry/base_link/coxa_BR_1/femur_BR_1/tibia_BR_1>
+            point3f physics:localPos0 = (0.049243, 0.049244, -0.01866)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.92387956, 0, 0, -0.3826834)
+            quatf physics:localRot1 = (0.92387956, 0, 0, -0.3826834)
+            float physics:lowerLimit = -75
+            float physics:upperLimit = 89.999985
+            custom float urdf:limit:effort = 100
+            custom float urdf:limit:velocity = 100
+        }
+
+        def PhysicsRevoluteJoint "J_Coxa_FL" (
+            prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+            float drive:angular:physics:maxForce = 100
+            uniform token physics:axis = "Z"
+            custom rel physics:body0
+            prepend rel physics:body0 = </Spiderbot_Without_Nav/Geometry/base_link>
+            custom rel physics:body1
+            prepend rel physics:body1 = </Spiderbot_Without_Nav/Geometry/base_link/coxa_FL_1>
+            point3f physics:localPos0 = (-0.0749, -0.0942, 0.0528)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (1, 0, 0, 0)
+            quatf physics:localRot1 = (1, 0, 0, 0)
+            float physics:lowerLimit = -60.000027
+            float physics:upperLimit = 89.999985
+            custom float urdf:limit:effort = 100
+            custom float urdf:limit:velocity = 100
+        }
+
+        def PhysicsRevoluteJoint "J_Femur_FL" (
+            prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+            float drive:angular:physics:maxForce = 100
+            uniform token physics:axis = "X"
+            custom rel physics:body0
+            prepend rel physics:body0 = </Spiderbot_Without_Nav/Geometry/base_link/coxa_FL_1>
+            custom rel physics:body1
+            prepend rel physics:body1 = </Spiderbot_Without_Nav/Geometry/base_link/coxa_FL_1/femur_FL_1>
+            point3f physics:localPos0 = (-0.015981, -0.055296, -0.0141)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.92387956, 0, 0, -0.3826834)
+            quatf physics:localRot1 = (0.92387956, 0, 0, -0.3826834)
+            float physics:lowerLimit = -89.999985
+            float physics:upperLimit = 44.999992
+            custom float urdf:limit:effort = 100
+            custom float urdf:limit:velocity = 100
+        }
+
+        def PhysicsRevoluteJoint "J_Tibia_FL" (
+            prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+            float drive:angular:physics:maxForce = 100
+            uniform token physics:axis = "X"
+            custom rel physics:body0
+            prepend rel physics:body0 = </Spiderbot_Without_Nav/Geometry/base_link/coxa_FL_1/femur_FL_1>
+            custom rel physics:body1
+            prepend rel physics:body1 = </Spiderbot_Without_Nav/Geometry/base_link/coxa_FL_1/femur_FL_1/tibia_FL_1>
+            point3f physics:localPos0 = (-0.049243, -0.049244, -0.01866)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.3826834, 0, 0, 0.92387956)
+            quatf physics:localRot1 = (0.3826834, 0, 0, 0.92387956)
+            float physics:lowerLimit = -75
+            float physics:upperLimit = 89.999985
+            custom float urdf:limit:effort = 100
+            custom float urdf:limit:velocity = 100
+        }
+
+        def PhysicsRevoluteJoint "J_Coxa_BL" (
+            prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+            float drive:angular:physics:maxForce = 100
+            uniform token physics:axis = "Z"
+            custom rel physics:body0
+            prepend rel physics:body0 = </Spiderbot_Without_Nav/Geometry/base_link>
+            custom rel physics:body1
+            prepend rel physics:body1 = </Spiderbot_Without_Nav/Geometry/base_link/coxa_BL_1>
+            point3f physics:localPos0 = (0.0549, -0.0942, 0.0528)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (1, 0, 0, 0)
+            quatf physics:localRot1 = (1, 0, 0, 0)
+            float physics:lowerLimit = -79.99998
+            float physics:upperLimit = 69.99997
+            custom float urdf:limit:effort = 100
+            custom float urdf:limit:velocity = 100
+        }
+
+        def PhysicsRevoluteJoint "J_Femur_BL" (
+            prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+            float drive:angular:physics:maxForce = 100
+            uniform token physics:axis = "X"
+            custom rel physics:body0
+            prepend rel physics:body0 = </Spiderbot_Without_Nav/Geometry/base_link/coxa_BL_1>
+            custom rel physics:body1
+            prepend rel physics:body1 = </Spiderbot_Without_Nav/Geometry/base_link/coxa_BL_1/femur_BL_1>
+            point3f physics:localPos0 = (0.056478, -0.011101, -0.0141)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.90630794, 0, 0, 0.422618)
+            quatf physics:localRot1 = (0.90630794, 0, 0, 0.422618)
+            float physics:lowerLimit = -89.999985
+            float physics:upperLimit = 44.999992
+            custom float urdf:limit:effort = 100
+            custom float urdf:limit:velocity = 100
+        }
+
+        def PhysicsRevoluteJoint "J_Tibia_BL" (
+            prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+            float drive:angular:physics:maxForce = 100
+            uniform token physics:axis = "X"
+            custom rel physics:body0
+            prepend rel physics:body0 = </Spiderbot_Without_Nav/Geometry/base_link/coxa_BL_1/femur_BL_1>
+            custom rel physics:body1
+            prepend rel physics:body1 = </Spiderbot_Without_Nav/Geometry/base_link/coxa_BL_1/femur_BL_1/tibia_BL_1>
+            point3f physics:localPos0 = (0.053348, -0.044764, -0.01866)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.422618, 0, 0, -0.90630794)
+            quatf physics:localRot1 = (0.422618, 0, 0, -0.90630794)
+            float physics:lowerLimit = -75
+            float physics:upperLimit = 89.999985
+            custom float urdf:limit:effort = 100
+            custom float urdf:limit:velocity = 100
+        }
+    }
+}
+
