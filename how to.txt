@@ -1,0 +1,9 @@
+to record :
+
+cd ~/project/Quadruped_Arm_bot
+   python3 scripts/data_collection/episode_recorder.py
+   
+
+to visualize : 
+
+python3 scripts/data_collection/visualize_episode.py data/episodes/[select episode]

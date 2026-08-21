@@ -314,8 +314,117 @@ derivation, but not yet actually watched move.
 - /joint_command has two publishers (gait node, arm node) -- worked in
   live testing, no dedicated simultaneous-stress test done.
 
-Next: CP5 -- Synchronized Data Collection Pipeline (per the original
-roadmap). Open decisions to resolve at the START of that chat, per the
-roadmap's explicit note: storage format (HDF5 vs rosbag vs custom) and
-why; sampling rate/synchronization method across camera + joint streams;
-how instruction labels are attached (manual per-episode vs templated).
+---
+
+## CP5 — Synchronized Data Collection Pipeline
+Status: FUNCTIONAL (pipeline built and verified) — NOT producing meaningful
+demonstrations yet, since no manipulable objects exist in the scene (see
+CP6 below, inserted specifically to address this).
+
+Open decisions resolved:
+- Storage format: HDF5 (matches prior Spiderbot RL rollout-logging
+  experience, avoids a rosbag->HDF5 conversion step before training).
+- Sync method: camera-driven callback -- on every /rgb frame, sample the
+  latest cached /joint_states message and stamp it. No message_filters
+  needed since joint state has no acquisition lag.
+- Instruction labels: manual per-episode entry via input() prompt at
+  episode start.
+
+Schema (as implemented): per-episode .h5 file with attrs (instruction,
+episode_index, recorded_at, joint_names) and datasets images [N,H,W,3]
+uint8 (H/W captured dynamically from the real camera frame), joint_positions
+[N,num_joints] float32 (num_joints captured dynamically -- currently 18,
+full merged articulation not arm-only), timestamps [N] float64.
+
+OmniGraph work: built a new standalone Action Graph (/Graph/joint_states_
+publish), separate from the existing working joint_states_control graph.
+On Playback Tick -> Isaac Read Joint State Node + ROS2 Publish Joint State
+(both directly from Tick, in parallel) -> ROS2 Context -> Publish node's
+Context -> all 7 Read-node outputs wired 1:1 into matching Publish-node
+inputs (current preferred pattern; Publish node's own targetPrim left
+empty).
+
+KEY DEBUGGING FINDING (relevant to future work too): Isaac Read Joint
+State Node's Prim Path must be the EXACT prim carrying
+UsdPhysics.ArticulationRootAPI -- for this robot that's
+/Spiderbot_Without_Nav/base_link, NOT the top-level /Spiderbot_Without_Nav
+Xform. The older IsaacArticulationController (used in the separate,
+already-working joint_states_control graph) tolerates the Xform path via
+a more forgiving resolution method (dynamic_control) -- that graph
+"working" was NOT proof the Xform path was correct for tensor-based nodes.
+/joint_states now publishes correctly with the base_link path.
+
+Scripts written:
+- scripts/data_collection/episode_recorder.py -- ROS2 node, subscribes
+  /rgb + /joint_states, records to HDF5 on Enter-key toggle (TEMPORARY --
+  not wired to a joy button yet; RECORD_BUTTON_INDEX was never confirmed
+  against xbox_teleop_node.py's real mapping, so keyboard was used to
+  unblock testing). Filenames: ep{NNN}_{instruction_slug}.h5,
+  auto-incrementing across runs (scans existing files for the next index).
+- scripts/data_collection/visualize_episode.py -- loads an episode .h5,
+  outputs a contact-sheet PNG (8 sampled frames), a joint-position-over-
+  time plot PNG, and a playback .mp4 (encoded via ffmpeg/libx264/yuv420p
+  for player compatibility -- original OpenCV mp4v output wasn't playable
+  in standard players).
+
+Bugs hit and fixed during testing:
+1. h5py not installed on target Python -- resolved via apt install
+   python3-pip + python3 -m pip install h5py --break-system-packages
+   (Ubuntu 24 externally-managed-environment behavior).
+2. Image dataset hardcoded to 480x640 (a guess) -- actual camera is
+   224x224. Fixed to capture real shape dynamically from the first frame.
+3. Race condition: stop_episode() (keyboard thread) could close/null the
+   HDF5 file while camera_cb (ROS executor thread) was mid-write, crashing
+   with "Invalid dataset identifier." Fixed with a threading.Lock()
+   guarding all state transitions and writes.
+4. mp4v-encoded video wouldn't play in standard players -- switched to
+   piping raw frames to ffmpeg (libx264 + yuv420p).
+5. Cosmetic-only: double-shutdown traceback on Ctrl+C -- wrapped in
+   try/except, no data-loss risk (episodes are closed/flushed on stop
+   before this point regardless).
+
+Test episodes recorded: ep001_turn_right.h5, ep002_turn_right.h5,
+ep003_turn_left.h5 -- verified real, changing joint trajectories (not
+frozen/static), correct image shape, video plays back correctly. These
+are NOT usable as real manipulation demonstrations (no objects in scene
+to interact with) -- kept only as pipeline-correctness verification, not
+CP7 training data.
+
+Open items / notes for next checkpoint:
+- Episode trigger is keyboard-only -- confirm a safe joy-button index and
+  wire it in properly.
+- Base state is not yet logged at all (schema doesn't currently have a
+  base_state field) -- CP5's original planning draft mentioned this as
+  likely-frozen/minimal since arm mode freezes the base, but this was
+  never explicitly revisited or implemented. Revisit if base_state ends
+  up mattering for CP7 training.
+- No volume/scale testing yet -- only 3 short manual test episodes exist.
+- arm_execution_node.py was NOT modified for CP5 (the originally-planned
+  /arm_joint_state_log publisher approach inside that node was abandoned
+  in favor of the OmniGraph-based real /joint_states -- a legitimate
+  architecture change from the original CP5 plan, noted explicitly per
+  the roadmap's requirement to flag such changes rather than carry them
+  forward silently).
+
+---
+
+## ROADMAP CHANGE (explicit confirmation given)
+Inserted new CP6 -- "Add Scene Objects for Pick-and-Place" -- between CP5
+and the old CP6, because CP5's recording pipeline is functional but has
+nothing real to record: no manipulable objects exist in the Isaac Sim
+scene yet, so CP7 (policy training, formerly CP6) cannot be meaningful
+without this. Renumbered everything from the old CP6 onward by +1: old
+CP6 (policy training) -> CP7, old CP7 (evaluation) -> CP8, old CP8+ ->
+CP9+. This was done with Harsh's explicit confirmation, per the roadmap
+file's own rule that renumbering requires explicit sign-off, not
+inference. See the updated project instructions file for the new CP6's
+full scope and open decisions (object shape/graspability, physics
+properties, placement/randomization, visual distinctiveness).
+
+Next: CP6 -- Add Scene Objects for Pick-and-Place. Open decisions to
+resolve at the START of that chat: object shapes/sizes (graspable within
+real gripper jaw range + arm's grounded reach envelope from CP4), object
+physics (collider/mass/friction, not just visuals), placement method
+(fixed/scripted vs. randomized), and visual distinctiveness (needed if
+instructions should reference specific objects, e.g. "pick up the red
+cube").
