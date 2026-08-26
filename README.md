@@ -14,8 +14,8 @@ This project extends an earlier quadruped teleop platform ([Bio-Inspired Quadrup
 | CP2 | Select and mount a small robotic arm | ✅ Complete |
 | CP3 | End-effector camera | ✅ Complete |
 | CP4 | Arm teleop node | ✅ Complete |
-| CP5 | Synchronized data collection pipeline | ⚙️ Functional (built & verified, no manipulable objects yet) |
-| CP6 | Add scene objects for pick-and-place | 🔶 In progress (grasping working, physics tuning + full success test ongoing) |
+| CP5 | Synchronized data collection pipeline | Functional (built & verified, no manipulable objects yet) |
+| CP6 | Add scene objects for pick-and-place | ✅ Complete |
 | CP7 | Small policy training (imitation learning) | ⬜ Not started |
 | CP8 | Policy execution / evaluation | ⬜ Not started |
 
