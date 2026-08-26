@@ -4,10 +4,7 @@ A bio-inspired quadruped robot fitted with a small robotic arm and end-effector 
 
 This project extends an earlier quadruped teleop platform ([Bio-Inspired Quadruped Spiderbot](https://harsh-siva.framer.website/projects/bio-inspired-autonomous-spiderbot-(on-going))) by re-mounting a sensorless, flat-top version of the chassis with a robotic arm, so the same walking robot can also see and manipulate objects.
 
-
-
-https://github.com/user-attachments/assets/21aadea1-8743-423a-80a0-ac24fda9088a
-
+https://github.com/user-attachments/assets/c0f81288-0462-474b-ba61-b59d8fef8450
 
 ---
 
