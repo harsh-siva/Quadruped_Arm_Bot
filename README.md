@@ -66,9 +66,9 @@ The robot currently walks, has a working teleoperated arm with an eye-in-hand ca
 
 ## Tech Stack
 
-- **Simulation:** NVIDIA Isaac Sim / Isaac Lab, OmniGraph
+- **Simulation:** NVIDIA Isaac Sim, OmniGraph
 - **Middleware:** ROS2
-- **Arm:** SO-ARM100 (SO101), 5-DOF + gripper
+- **Arm:** SO-ARM (SO101), 5-DOF + gripper
 - **Kinematics:** Custom Python IK/FK (`scipy.optimize.least_squares`), cross-validated against `yourdfpy`
 - **Data:** HDF5, OpenCV, ffmpeg
 - **Language:** Python
